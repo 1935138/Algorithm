@@ -20,7 +20,7 @@ public class Main {
 			int count = freq[i];
 			if (count > max_freq) {
 				max_freq = count;
-				max_freq_char = (char) ('A' + i);
+				max_freq_char = (char) (i + 'A');
 			} else if (count == max_freq) {
 				max_freq = count;
 				max_freq_char = '?';
