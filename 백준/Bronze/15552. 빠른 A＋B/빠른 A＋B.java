@@ -8,15 +8,17 @@ public class Main {
 		int N = Integer.parseInt(br.readLine());
 
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		StringBuilder sb = new StringBuilder();
 
 		for (int i = 0; i < N; i++) {
 			StringTokenizer stz = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(stz.nextToken());
 			int b = Integer.parseInt(stz.nextToken());
 
-			bw.write((a + b) + "\n");
+			sb.append(a + b).append("\n");
 		}
 
+		bw.write(sb.toString());
 		bw.flush();
 		bw.close();
 	}
