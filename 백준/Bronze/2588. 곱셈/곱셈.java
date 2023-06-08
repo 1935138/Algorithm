@@ -6,12 +6,12 @@ public class Main {
 		int num1 = Integer.parseInt(br.readLine());
 		int num2 = Integer.parseInt(br.readLine());
 
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		bw.write(num1 * (num2 % 10) + "\n");
-		bw.write(num1 * (num2 / 10 % 10) + "\n");
-		bw.write(num1 * (num2 / 100 % 10) + "\n");
-		bw.write(num1 * num2 + "\n");
-		bw.flush();
-		bw.close();
+		StringBuilder sb = new StringBuilder();
+		sb.append(num1 * (num2 % 10) + "\n");
+		sb.append(num1 * (num2 / 10 % 10) + "\n");
+		sb.append(num1 * (num2 / 100 % 10) + "\n");
+		sb.append(num1 * num2 + "\n");
+
+		System.out.println(sb);
 	}
 }
